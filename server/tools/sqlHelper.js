@@ -36,6 +36,14 @@ let queryMobile = function(wxId){
   return result
 }
 
+//查询是否有电话
+let checkBindTel = function(wxId){
+  let _sql = "select * from userInfo where wxId = ?"
+  var result = row(_sql, wxId)
+  return result
+}
+
 module.exports = {
-  queryMobile
+  queryMobile,
+  checkBindTel
 }

@@ -1,3 +1,20 @@
+
+const qcloudDB = {
+    host: 'localhost',
+    port: 3306,
+    user: 'root',
+    db: 'cAuth',
+    pass: 'wx93341736c68e3616',
+    char: 'utf8mb4'
+}
+const x220DB = {
+    host: 'localhost',
+    port: 3306,
+    user: 'root',
+    db: 'cAuth',
+    pass: '',
+    char: 'utf8mb4'
+}
 const CONF = {
     port: '5757',
     rootPathname: '',
@@ -16,14 +33,7 @@ const CONF = {
      * 若使用了腾讯云微信小程序解决方案
      * 开发环境下，MySQL 的初始密码为您的微信小程序 appid
      */
-    mysql: {
-        host: 'localhost',
-        port: 3306,
-        user: 'root',
-        db: 'cAuth',
-        pass: 'wx93341736c68e3616',
-        char: 'utf8mb4'
-    },
+    mysql: x220DB,
 
     cos: {
         /**
@@ -33,7 +43,7 @@ const CONF = {
         region: 'ap-guangzhou',
         // Bucket 名称
         fileBucket: 'qcloudtest',
-        // 文件夹
+        // 文件
         uploadFolder: ''
     },
 

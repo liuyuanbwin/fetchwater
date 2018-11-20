@@ -3,6 +3,6 @@ module.exports =async ctx => {
   // ctx.state.data = {
   //   msg:'hello world'
   // }
-  var result = await sqltool.queryMobile('111')
+  var result = await sqltool.queryMobile('222')
   ctx.state.data = result
 }
