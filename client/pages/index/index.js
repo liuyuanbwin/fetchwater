@@ -10,6 +10,11 @@ Page({
         takeSession: false,
         requestResult: ''
     },
+    toBindTel:function(){
+      wx.redirectTo({
+        url: '../bindTel/bindTel',
+      })
+    },
 
     // 用户登录示例
     bindGetUserInfo: function () {
