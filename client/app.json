@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/addCgi/addCgi",
     "pages/bindTel/bindTel",
-    "pages/main"
+    "pages/main/main"
   
   ],
   "window": {

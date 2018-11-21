@@ -4,6 +4,11 @@ var config = require('../../config')
 var util = require('../../utils/util.js')
 
 Page({
+    onLoad:function(){
+        wx.redirectTo({
+            url:'../main/main'
+        })
+    },
     data: {
         userInfo: {},
         logged: false,
