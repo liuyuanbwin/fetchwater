@@ -1,2 +1,16 @@
 <!--client/pages/main.wxml-->
-<text>client/pages/main.wxml</text>
+<i-cell-group>
+    <i-cell title="{{userInfo.userinfo.openId}}" bind:tap="logUser">      
+    <image style="width:100rpx;height:100rpx;" class="" src="./images/nongfu.jpeg" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">     
+    </image>
+    </i-cell>
+    <i-cell title="{{tel}}" is-link>
+    <i-icon type="activity" size="60" color="#80848f" />
+    </i-cell>
+    <i-cell title="只显示箭头" is-link>
+    <i-icon type="activity" size="60" color="#80848f" />
+    </i-cell>
+    <i-cell title="只显示箭头" is-link>
+    <i-icon type="activity" size="60" color="#80848f" />
+    </i-cell>
+</i-cell-group>

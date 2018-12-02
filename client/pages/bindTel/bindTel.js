@@ -4,7 +4,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    tel:''
+
   },
 
   /**
@@ -61,5 +62,17 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+
+  //绑定输入框内容
+  watchTel:function(e){
+    console.log('tel ' + JSON.stringify(e.detail.detail.value))
+    this.setData({
+      tel:e.detail.detail.value
+    })
+  },
+  handleClick:function(){
+    console.log('tel' + tel);
   }
+
 })

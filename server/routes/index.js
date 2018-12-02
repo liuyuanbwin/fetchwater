@@ -34,4 +34,8 @@ router.post('/message', controllers.message.post)
 
 router.get('/demo', controllers.demo)
 
+router.get('/bindTel', controllers.bindTel.get)
+
+router.post('/bindTel',controllers.bindTel.post)
+
 module.exports = router

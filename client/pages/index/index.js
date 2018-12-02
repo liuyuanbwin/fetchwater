@@ -5,10 +5,12 @@ var util = require('../../utils/util.js')
 
 Page({
     onLoad:function(){
-        wx.redirectTo({
-            url:'../main/main'
-        })
+        // wx.redirectTo({
+        //     url:'../main/main'
+        // })
+        
     },
+    
     data: {
         userInfo: {},
         logged: false,
@@ -33,8 +35,10 @@ Page({
             // 第二次登录
             // 或者本地已经有登录态
             // 可使用本函数更新登录态
+            console.log('qcloud.loginWithCode <<<<----')
             qcloud.loginWithCode({
                 success: res => {
+                    console.log('用户信息 ' + JSON.stringify(res))
                     this.setData({ userInfo: res, logged: true })
                     util.showSuccess('登录成功')
                 },
@@ -44,8 +48,10 @@ Page({
                 }
             })
         } else {
+            console.log('qcloud.login <<<<----')
             // 首次登录
             qcloud.login({
+                
                 success: res => {
                     this.setData({ userInfo: res, logged: true })
                     util.showSuccess('登录成功')
@@ -57,7 +63,9 @@ Page({
             })
         }
     },
-
+    onShow:function(){
+       // this.bindGetUserInfo()
+    },
     // 切换是否带有登录态
     switchRequestMode: function (e) {
         this.setData({

@@ -4,6 +4,7 @@ const config = require('../config.js')
 var pool = mysql.createPool({
   connectionLimit : 50,
   host :config.mysql.host,
+  port:config.mysql.port,
   user :config.mysql.user,
   password :config.mysql.pass,
   database : config.mysql.db,
@@ -38,8 +39,8 @@ let queryMobile = function(wxId){
 
 //查询是否有电话
 let checkBindTel = function(wxId){
-  let _sql = "select * from userInfo where wxId = ?"
-  var result = row(_sql, wxId)
+  let _sql = "select * from bindTel where openid = ?"
+  var result = row(_sql, wxId)//
   return result
 }
 

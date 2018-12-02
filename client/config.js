@@ -6,6 +6,8 @@
 //var host = 'https://khbkyy8i.qcloud.la';
 var host = 'http://localhost:5757';
 
+//var env = require('../ENV.js')
+
 var config = {
 
     // 下面的地址配合云端 Demo 工作

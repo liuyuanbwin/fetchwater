@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/main/main",
     "pages/index/index",
     "pages/addCgi/addCgi",
     "pages/bindTel/bindTel",
-    "pages/main/main"
-  
+    "pages/auth/auth"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
