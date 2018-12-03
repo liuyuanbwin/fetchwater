@@ -1,3 +1,11 @@
+var qcloud = require('../../vendor/wafer2-client-sdk/index')
+var config = require('../../config')
+var util = require('../../utils/util.js')
+let app =  getApp();
+
+  
+
+
 Page({
 
   /**
@@ -73,6 +81,29 @@ Page({
   },
   handleClick:function(){
     console.log('tel' + this.data.tel);
-  }
+    this.bindTel(app.globalData.openId,this.data.tel)
+  },
+  //bind tel 
+  bindTel:function(openId, tel){
+    util.showBusy('请求中...')
+    var that = this
 
+    wx.request({
+      method:'POST',
+      data:{
+        openId:openId,
+        tel:tel
+      },
+      url:`${config.service.host}/weapp/bindTel`,
+      login:false,
+      success(result){
+        util.showSuccess('请求完成')
+        console.log('result ->> ' + JSON.stringify(result))
+      },
+      fail(error){
+        util.showModel('请求失败',error)
+        console.log('request fail',error)
+      }
+    })
+  }
 })

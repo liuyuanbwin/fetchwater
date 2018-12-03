@@ -10,7 +10,8 @@ async function get (ctx, next) {
 
 async function post (ctx, next) {
     console.log('post ' + 'bindTel <<' + JSON.stringify(ctx.request.body))
-    let result = await sqltool.checkBindTel(ctx.request.body.openId)
+    let result = await sqltool.bindTel(ctx.request.body.openId, ctx.request.body.tel)
+    //let result = await sqltool.checkBindTel(ctx.request.body.openId)
     console.log('result ' + JSON.stringify(result))
     ctx.state.data = result
 }

@@ -30,21 +30,29 @@ var row = (sql, ...params ) => {
   });
 };
 
-//查询是否有电话
+//query bond tel
 let queryMobile = function(wxId){
   let _sql = "select * from userInfo where wxId = ?"
   var result = row(_sql, wxId)
   return result
 }
 
-//查询是否有电话
+//query bond tel
 let checkBindTel = function(wxId){
   let _sql = "select * from bindTel where openid = ?"
   var result = row(_sql, wxId)//
   return result
 }
 
+//bind tel
+let bindTel = function(openId,tel){
+  let _sql = "insert into bindTel openId=?, tel=?"
+  var result = row(_sql,openId, tel)
+  return result
+}
+
 module.exports = {
   queryMobile,
-  checkBindTel
+  checkBindTel,
+  bindTel
 }

@@ -2,6 +2,8 @@
 var qcloud = require('../../vendor/wafer2-client-sdk/index')
 var config = require('../../config')
 var util = require('../../utils/util.js')
+let app =  getApp();
+
 Page({
 
   /**
@@ -83,6 +85,8 @@ Page({
             qcloud.loginWithCode({
                 success: res => {
                     console.log('用户信息 ' + JSON.stringify(res))
+                    app.globalData.openId = res.openId
+                    console.log('用户信息 ' + app.globalData.openId)
                     //this.setData({ userInfo: res, logged: true })
                     util.showSuccess('登录成功')
                     wx.redirectTo({
@@ -106,6 +110,9 @@ Page({
                 
                 success: res => {
                     //this.setData({ userInfo: res, logged: true })
+                    console.log('用户信息 ' + JSON.stringify(res))
+                    app.globalData.openId = res.openId
+                    console.log('用户信息 ' + app.globalData.openId)
                     util.showSuccess('登录成功')
                     wx.redirectTo({
                       url: '../main/main',
