@@ -46,7 +46,8 @@ let checkBindTel = function(wxId){
 
 //bind tel
 let bindTel = function(openId,tel){
-  let _sql = "insert into bindTel openId=?, tel=?"
+  console.log('insert into openID ' + openId + 'tel ' + tel)
+  let _sql = "insert into bindTel set openId=?,tel=?;"
   var result = row(_sql,openId, tel)
   return result
 }

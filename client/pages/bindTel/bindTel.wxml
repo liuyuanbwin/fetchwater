@@ -1,10 +1,10 @@
 <view class="" hover-class="none" hover-stop-propagation="false">
     <i-panel title="绑定手机号">
-    <i-input bind:change="watchTel" value="{{ tel }}" type="text" title="收货人" autofocus placeholder="名字" maxlength="50"/>
+    <i-input bind:change="watchTel" value="{{ tel }}" type="text" title="手机号码" autofocus placeholder="请输入手机号" maxlength="50"/>
 </i-panel>
 
 
 
 </view>
 
-<i-button bind:click="handleClick">默认按钮</i-button>
+<i-button bind:click="handleClick">绑定</i-button>

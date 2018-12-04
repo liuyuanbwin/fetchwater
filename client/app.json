@@ -5,7 +5,7 @@
     "pages/addCgi/addCgi",
     "pages/bindTel/bindTel",
     "pages/auth/auth",
-    "pages/cart",
+    "pages/cart/cart",
     "pages/bindAddr/bindAddr",
     "pages/editBill/editBill",
     "pages/editOrder/editOrder",
